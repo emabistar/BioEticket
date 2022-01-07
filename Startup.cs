@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using bioticket.Data;
+using bioticket.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +30,8 @@ namespace bioticket
             services.AddDbContext<AppDbContext>(options =>
             //options.UseSqlServer(Configuration.ConnectionStrings("DefaultConnectionString")));
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+            // Srvice configuration
+            services.AddScoped<IActorsService, ActorsService>();
             services.AddControllersWithViews();
         }
 

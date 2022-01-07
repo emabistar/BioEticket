@@ -10,9 +10,12 @@ namespace bioticket.Models
     {
         [Key]
         public int Id { get; set; }
+        [Display(Name = "Biograph Logo")]
         public string Logo { get; set; }
+        [Display(Name = "Biograph Navn")]
         public string Name { get; set; }
 
+        [Display(Name = "Biograph Beskrivelse")]
         public string Description { get; set; }
 
         // Relationships

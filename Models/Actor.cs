@@ -9,10 +9,19 @@ namespace bioticket.Models
     public class Actor
     {  [Key]
        public int Id { get; set; }
-       public string ProfilePictureURL { get; set; }
-       public string FullName{ get; set; }
-
-       public string Bio { get; set; }
+       
+        [Display(Name ="Profile Picture URL")]
+        [Required(ErrorMessage = "Profile picture url is required")]
+        public string ProfilePictureURL { get; set; }
+       
+        [Display(Name = "Full Name")]
+        [Required(ErrorMessage = "Full Name is required")]
+        [StringLength(50,MinimumLength = 3, ErrorMessage ="Full Name must between 3 and 50 chars")]
+        public string FullName{ get; set; }
+        
+        [Display(Name = "Biography")]
+        [Required(ErrorMessage = "Bio is required")]
+        public string Bio { get; set; }
 
         //relationships
         public List< Actor_Movie> Actors_Movies { get; set; }

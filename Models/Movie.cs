@@ -11,9 +11,13 @@ namespace bioticket.Models
     {
         [Key]
         public int Id { get; set; }
+        [Display(Name = "Navn")]
         public string Name { get; set; }
+        [Display(Name = "Pris")]
         public double Price { get; set; }
+        [Display(Name = "Bilede URL")]
         public string ImageURL { get; set; }
+        [Display(Name = "Beskrivelse")]
         public string Description { get; set; }
 
         public DateTime StartDate { get; set; }
@@ -28,7 +32,7 @@ namespace bioticket.Models
         // Cinena
         public int CinemaId { get; set; }
         [ForeignKey("CinemaId")]
-        public Cinema Ciname { get; set; }
+        public Cinema Cinema { get; set; }
 
         public int ProducerId { get; set; }
         [ForeignKey("ProducerId")]
