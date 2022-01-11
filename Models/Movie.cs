@@ -4,11 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using bioticket.Data.Base;
 
 namespace bioticket.Models
 {
-    public class Movie
-    {
+    public class Movie: IEntityBase
+    { 
         [Key]
         public int Id { get; set; }
         [Display(Name = "Navn")]

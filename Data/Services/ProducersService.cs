@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace bioticket.Data.Services
 {
-    public class ActorsService : EntityBaseRepository<Actor>,IActorsService
+    public class ProducersService : EntityBaseRepository<Producer>, IProducersService
     {
-        
-        public ActorsService(AppDbContext context) : base(context) { }
+        public ProducersService(AppDbContext context) : base(context)
+        {
 
-       
+        }
     }
 }

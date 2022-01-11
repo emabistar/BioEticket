@@ -30,8 +30,11 @@ namespace bioticket
             services.AddDbContext<AppDbContext>(options =>
             //options.UseSqlServer(Configuration.ConnectionStrings("DefaultConnectionString")));
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
-            // Srvice configuration
+            // Service configuration
+            services.AddScoped<IMoviesService, MoviesService>();
+            services.AddScoped<ICinemasService, CinemasService>();
             services.AddScoped<IActorsService, ActorsService>();
+            services.AddScoped<IProducersService, ProducersService>();
             services.AddControllersWithViews();
         }
 
