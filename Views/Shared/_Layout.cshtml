@@ -46,19 +46,39 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+
+
+
+
                     <form class="form-inline my-2 my-lg-0" asp-controller="Movies" asp-action="Filter" style="padding-right: 25px;">
                         <input name="searchString" type="text" class="form-control" placeholder="Search for a movie..." aria-label="Recipient's username" aria-describedby="button-addon2">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
                     </form>
+                    <ul class=" navbar-nav">
+                        @await Component.InvokeAsync("ShoppingCartSummary")
+                    </ul>
+
+                    <div class=" dropdown">
+                        <button class=" btn btn-outline-success dropdown-toggle" type="button" id="profile-btn" data-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-badge "></i>Hello User
+                        </button>
+                        <ul class=" dropdown-menu" aria-labelledby="profile-btn">
+                            <li>
+                                <a class=" dropdown-item" asp-controller="Orders" asp-action="Index">
+                                    <i class=" bi  bi-list">Orders</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
                     @*<ul class="navbar-nav flex-grow-1">
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </li>
-        </ul>*@
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>*@
                 </div>
             </div>
         </nav>
@@ -78,11 +98,8 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @if (IsSectionDefined("scripts"))
-    {
-        @await RenderSectionAsync("Scripts", required: true)
-    }
-
+  
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
 

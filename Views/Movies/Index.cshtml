@@ -74,8 +74,8 @@
                                    asp-action="Details" asp-route-id="@item.Id">
                                     <i class="bi bi-eye-fill"> Show Detail</i>
                                 </a>
-                                <a class="btn btn-outline-success  float-rigth ">
-                                    <i class="bi bi-cart-plus"> Add to cart (Price @item.Price.ToString("c"))</i>
+                                <a class="btn btn-outline-success  float-rigth " asp-controller="Orders" asp-action="AddItemToShoppingCart" asp-route-id="@item.Id">
+                                    <i class="bi bi-cart-plus" > Add to cart (Price @item.Price.ToString("c"))</i>
                                 </a>
                             </p>
 

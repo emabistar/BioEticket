@@ -98,7 +98,7 @@
                                asp-action="Index" >
                               Back to List
                             </a>
-                            <a class="btn btn-outline-success  float-rigth ">
+                            <a class="btn btn-outline-success  float-rigth "asp-controller="Orders" asp-action="AddItemToShoppingCart" asp-route-id="@Model.Id">
                                 <i class="bi bi-cart-plus"> Add to cart (Price @Model.Price.ToString("c"))</i>
                             </a>
                         </p>

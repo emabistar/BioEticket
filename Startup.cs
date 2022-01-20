@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using bioticket.Data;
+using bioticket.Data.Cart;
 using bioticket.Data.Services;
+using bioticket.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,10 +36,29 @@ namespace bioticket
             //options.UseSqlServer(Configuration.ConnectionStrings("DefaultConnectionString")));
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             // Service configuration
+           
             services.AddScoped<IMoviesService, MoviesService>();
             services.AddScoped<ICinemasService, CinemasService>();
             services.AddScoped<IActorsService, ActorsService>();
             services.AddScoped<IProducersService, ProducersService>();
+            services.AddScoped<IOrdersService, OrdersService>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
+
+            // Authentication and authorazation
+
+
+            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            services.AddMemoryCache();
+            services.AddSession();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            });
+
+
+
             services.AddControllersWithViews();
         }
 
@@ -55,7 +79,10 @@ namespace bioticket
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession();
+            // Athentication and authtorization
+            app.UseAuthentication();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -65,6 +92,7 @@ namespace bioticket
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 //seed database
                 AppDbInitialize.Seed(app);
+                AppDbInitialize.SeedUsersAndRolesAsync(app).Wait();
             });
         }
     }
