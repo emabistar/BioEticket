@@ -82,7 +82,7 @@ namespace bioticket
             app.UseSession();
             // Athentication and authtorization
             app.UseAuthentication();
-            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -93,6 +93,7 @@ namespace bioticket
                 //seed database
                 AppDbInitialize.Seed(app);
                 AppDbInitialize.SeedUsersAndRolesAsync(app).Wait();
+              
             });
         }
     }

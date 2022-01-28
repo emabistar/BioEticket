@@ -19,9 +19,13 @@
                             <div class="card-text">
                                 <h5 class="card-title">
                                     @item.Name
-                                    <a class=" text-white float-right" asp-controller="Movies" asp-action="Edit" asp-route-id ="@item.Id">
-                                        <i class="bi bi-pencil-square">Edit</i>
-                                    </a>
+                                    @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+                                    {
+                                        <a class=" text-white float-right" asp-controller="Movies" asp-action="Edit" asp-route-id="@item.Id">
+                                            <i class="bi bi-pencil-square">Edit</i>
+                                        </a>
+                                    }
+
                                 </h5>
                             </div>
 

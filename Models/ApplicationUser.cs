@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace bioticket.Models
 {
-    public class ApplicationUser :IdentityUser
+    public class ApplicationUser:IdentityUser
     {
         [Display(Name = "Full name")]
         public string FullName { get; set; }
