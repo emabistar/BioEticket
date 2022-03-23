@@ -2,25 +2,25 @@
 
 
 # bioeticket
-Movie Managment System with ASP.NET corre 5 and Bootstrap 5
+Movie Managment System with ASP.NET core 5 and Bootstrap 5
 
-This applicaton is a full e-comerce   Movie Management service application 
+This applicaton is a full e-comerce   Movie Management service application with paypal payment system 
 
 Task icluded in this application are:
-# Crud operations with Entity Framework Core
-# SQl Server configuraion
+-Crud operations with Entity Framework Core
+- SQl Server configuraion
 
-#EFCore migrations, relationship types, 
-#
-#Cookie-based authentication
+-EFCore migrations, relationship types, 
 
-#Role-based authorization
+-Cookie-based authentication
 
-#Role-based UI rendering
+-Role-based authorization
 
-#Dynamic rendering with ViewComponents
+-Role-based UI rendering
 
-#Online payments using Paypal SDK
+-Dynamic rendering with ViewComponents
+
+-Online payments using Paypal SDK
 
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/movies.png)
 
