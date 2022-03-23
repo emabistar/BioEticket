@@ -28,10 +28,12 @@ Task icluded in this application are:
   - Swapping database connection string from local to azure one
   - setting up azure app service
   - Deploying your app to azure
+  - 
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/Bib-1.png)
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/Bib-2.png)
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/Bib-3.png)
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/Bib-4.png)
+
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/movies.png)
 
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/movieDetails.png)
