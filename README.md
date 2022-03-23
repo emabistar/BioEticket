@@ -21,6 +21,16 @@ Task icluded in this application are:
 - Dynamic rendering with ViewComponents
 
 - Online payments using Paypal SDK
+# TO UPLOAD THIS PROJECT TO AZURE. FOLLOW THESE STEPS:
+# Depending on your achitecure, the basic are the folows:
+  - Create an account with azure
+  - Setting Azure SQL server
+  - Swapping database connection string from local to azure one
+  - setting app azure app service
+  - Deploying your app to azure
+# SECOND OPTION:
+# You might need to deploy  for futher development in this case you may use Github Action for CI/CD in order to. automate your ,build test and deployement.
+
 
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/movies.png)
 
