@@ -28,8 +28,6 @@ Task icluded in this application are:
   - Swapping database connection string from local to azure one
   - setting app azure app service
   - Deploying your app to azure
-# SECOND OPTION:
-- To deploy  for futher development with azure in this case you may use Github Action for CI/CD in order to. automate your ,build test and deployement.
 
 
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/movies.png)
