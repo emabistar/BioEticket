@@ -26,7 +26,7 @@ Task icluded in this application are:
   - Create an account with azure
   - Setting Azure SQL server
   - Swapping database connection string from local to azure one
-  - setting app azure app service
+  - setting up azure app service
   - Deploying your app to azure
 
 
