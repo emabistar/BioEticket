@@ -29,7 +29,7 @@ Task icluded in this application are:
   - setting up azure app service
   - Deploying your app to azure
   - 
-![alt text](https://github.com/emabistar/bioeticket/blob/master/Bib-1.png)
+
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/Bib-2.png)
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/Bib-3.png)
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/Bib-4.png)
