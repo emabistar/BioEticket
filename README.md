@@ -10,17 +10,17 @@ Task icluded in this application are:
 -Crud operations with Entity Framework Core
 - SQl Server configuraion
 
--EFCore migrations, relationship types, 
+- EFCore migrations, relationship types, 
 
--Cookie-based authentication
+- Cookie-based authentication
 
--Role-based authorization
+- Role-based authorization
 
--Role-based UI rendering
+- Role-based UI rendering
 
--Dynamic rendering with ViewComponents
+- Dynamic rendering with ViewComponents
 
--Online payments using Paypal SDK
+- Online payments using Paypal SDK
 
 ![alt text](https://github.com/emabistar/bioeticket/blob/master/movies.png)
 
