@@ -21,7 +21,7 @@ Task icluded in this application are:
 - Dynamic rendering with ViewComponents
 
 - Online payments using Paypal SDK
-# TO UPLOAD THIS PROJECT TO AZURE. FOLLOWS THESE STEPS:
+# TO UPLOAD THIS PROJECT TO AZURE cloud FOLLOWS THESE STEPS:
 # Depending on your achitecure, the basics are the follows:
   - Create an account with azure
   - Setting Azure SQL server
